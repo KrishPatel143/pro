@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.organizer-navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    float: left;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+/* Link this CSS in your <head> section via <link rel="stylesheet" href="styles.css"> */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.event-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.publish-btn {
+    padding: 5px 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.publish-btn:hover {
+    background-color: #004A7F;
+}
+
+
+.add-event {
+    font-size: 24px;
+    background-color: #eee;
+}
+
+.event-form-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* Continuing from the z-index property for .event-form-container */
+    z-index: 1000; /* Ensure the form appears above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px; /* Adjust based on your preference */
+}
+
+.event-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-form label {
+    margin-top: 10px;
+}
+
+.event-form input[type="text"],
+.event-form input[type="file"],
+.event-form select,
+.event-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: calc(100% - 22px); /* Adjusts for padding and border */
+}
+
+.event-form textarea {
+    resize: vertical; /* Allows the textarea to be resized vertically */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #0056b3;
+}
+
+.form-actions button[type="button"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+.form-actions button:hover {
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.unpublished-events-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.unpublished-events-section h2 {
+    margin-bottom: 15px;
+}
+
+.events-list .event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.members-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 97%
+}
+
+.members-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto; /* Ensures table is scrollable on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn, .upgrade-btn, .delete-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #ffa500; /* Orange */
+}
+
+.upgrade-btn {
+    background-color: #004A7F; /* Dark Blue */
+}
+
+.delete-btn {
+    background-color: #ff4d4d; /* Red */
+}
+
+.edit-btn:hover, .upgrade-btn:hover, .delete-btn:hover {
+    opacity: 0.8;
+}

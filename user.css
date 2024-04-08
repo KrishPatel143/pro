@@ -1,0 +1,413 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.user-dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0 16px;
+}
+
+.user-dashboard-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.user-dashboard-nav li {
+    margin-right: 16px;
+}
+
+.user-dashboard-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.user-dashboard-nav li a:hover, .avatar-container a:hover {
+    background-color: #111;
+}
+
+.avatar-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.modal-avatar {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.profile-display-card {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-details h3, .profile-details p {
+    margin: 5px 0;
+}
+
+.edit-icon {
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2);
+}
+
+.edit-form-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 95%;
+    max-width: 500px;
+    background-color: #fff;
+}
+
+.edit-form-container input, .edit-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.password-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-field input {
+    flex-grow: 1;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+.device-management-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    margin-bottom: 200px;
+    max-width: 98%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.device-management-container:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.device-card, .add-device-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px; /* Adjust based on content */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.device-card:hover, .add-device-card:hover {
+    transform: scale(1.05);
+}
+
+.add-icon {
+    font-size: 24px;
+    display: block;
+}
+
+.edit-btn, .delete-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.device-form-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Adjust as necessary */
+    text-align: center;
+}
+
+.device-form-container input, .device-form-container textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+.device-registration-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: fit-content;
+    background-color: #f9f9f9;
+}
+
+.device-registration-container select, .device-registration-container button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.device-registration-container button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.device-registration-container button:hover {
+    background-color: #45a049;
+}
+
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Container for device cards */
+.devices-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual device cards */
+.device-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    width: calc(33.333% - 20px); /* Adjust based on preference, accounting for gap */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.device-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Styling for the add device card specifically */
+.add-device {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4CAF50;
+}
+
+.add-device:hover {
+    background-color: #e8f5e9;
+}
+
+/* Device form container */
+.device-form-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+.device-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.device-form label {
+    margin-top: 10px;
+}
+
+.device-form input[type="text"],
+.device-form textarea,
+.device-form select {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.device-form textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50; /* Submit button */
+}
+
+.form-actions button[type="button"] {
+    background-color: #f44336; /* Cancel button */
+}
+
+.form-actions button:hover {
+    opacity: 0.9;
+}

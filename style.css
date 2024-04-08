@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px; /* Adjust based on your logo's size */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+
+/* Existing styles */
+
+.home-section {
+    text-align: center; /* Center-align the text */
+    padding: 50px 20px; /* Add some padding */
+    background: #eee; /* Light background color for the section */
+}
+
+.home-section h1 {
+    margin-bottom: 20px; /* Space between the h1 and the paragraph */
+    font-size: 2.5rem; /* Large font size for the tagline */
+    color: #333; /* Dark text for contrast */
+}
+
+.home-section p {
+    margin-bottom: 30px; /* Space before the button */
+    font-size: 1.2rem; /* Readable paragraph size */
+    color: #666; /* Slightly lighter text color */
+}
+
+.join-btn {
+    display: inline-block; /* Necessary for applying padding and margins */
+    padding: 10px 30px; /* Size of the button */
+    background-color: #0056b3; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.join-btn:hover {
+    background-color: #004494; /* Darker shade on hover */
+}
+
+/* Media queries and other styles */
+
+
+
+/* Existing styles */
+.events-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px; /* Increased space between cards */
+    padding: 80px;
+    margin: 80px auto; /* Ensure there's space around the container */
+    width: calc(100% - 160px); /* Adjust width to account for padding */
+    background: #f9f9f9; /* Slightly different background to distinguish the section */
+    transition: background-color 0.3s; /* Background color change on hover */
+    border-radius: 15px; /* Adds curved corners to the container */
+}
+
+.event-card {
+    flex-basis: 30%; /* Adjust based on preference and responsiveness */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Soft shadow for depth */
+    padding: 20px;
+    background: #fff; /* White background for the card */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+    border-radius: 10px; /* Adds curved corners to each card */
+}
+
+
+
+.events-section .container:hover {
+    background: #eaeaea; /* Darker background on hover */
+}
+
+
+.event-card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.event-image {
+    width: 100%; /* Ensure image fits card width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+
+.event-time, .event-venue, .event-description {
+    margin-bottom: 10px; /* Spacing for readability */
+}
+
+/* Ensure responsiveness and legibility on smaller screens */
+@media screen and (max-width: 768px) {
+    .events-section .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        flex-basis: 80%; /* Adjust for smaller screens */
+    }
+}
+
+
+
+/* Existing styles for .events-section .container and .event-card here */
+
+.past-events-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 80px;
+    margin: 80px auto;
+    width: calc(100% - 160px);
+    background: #f0f0f0; /* Slightly darker to differentiate from upcoming events */
+    border-radius: 15px;
+}
+
+.past-events-section .event-card {
+    flex-basis: 30%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    background: #fff;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.past-events-section .event-card:hover .event-image {
+    filter: grayscale(100%); /* Convert image to black and white on hover */
+}
+
+.past-events-section .event-card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.past-events-section .event-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: filter 0.3s ease; /* Smooth transition for the filter */
+}
+
+
+
+
+.about-us-section .container {
+    display: flex;
+    align-items: center; /* Vertically align the items in the container */
+    gap: 20px; /* Space between the photo and the content */
+    padding: 40px; /* Padding around the entire container */
+    margin: 40px auto; /* Adds margin to all sides and centers the container */
+    max-width: 1200px; /* Maximum width of the container */
+    background: #f0f0f0; /* Background color for the section */
+    border-radius: 10px; /* Optional: Adds rounded corners to the container */
+}
+
+
+.team-photo img {
+    width: 100%; /* Ensure the image is responsive */
+    max-width: 400px; /* Maximum size of the photo */
+    border-radius: 10px; /* Optional: Adds rounded corners to the photo */
+}
+
+.about-content {
+    flex: 1; /* Allows the content area to fill the remaining space */
+}
+
+.about-content h3 {
+    margin-bottom: 15px; /* Spacing below the heading */
+}
+
+.contact-btn {
+    display: inline-block; /* Allows applying padding and margin */
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 30px; /* Size of the button */
+    background-color: #0056b3; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+}
+
+.contact-btn:hover {
+    background-color: #004494; /* Darker button color on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .about-us-section .container {
+        flex-direction: column; /* Stack the photo and content vertically on small screens */
+        text-align: center; /* Center-align the text */
+    }
+
+    .team-photo img {
+        margin-bottom: 20px; /* Adds spacing between the photo and the content on small screens */
+    }
+
+    .about-content {
+        flex: none; /* Reset flex sizing for the content area */
+    }
+}
+
+.site-footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* Light text for contrast */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.site-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer a {
+    color: #fff; /* Ensures links are visible against the footer background */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #a9a9a9; /* Lighter grey on hover for a subtle effect */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; /* Space between social media icons */
+}
+
+.social-icons img {
+    width: 24px; /* Adjust based on the size of your icons */
+    height: auto;
+}
+
+
+
+/* login - sign up page  */
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.user-form .form-row {
+    margin-bottom: 20px;
+}
+
+.user-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-form input[type="text"],
+.user-form input[type="email"],
+.user-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.user-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #004494;
+}
+
+.form-container p {
+    text-align: center;
+}
+
+.form-container a {
+    color: #0056b3;
+    text-decoration: none;
+}
